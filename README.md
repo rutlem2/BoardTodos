@@ -3,7 +3,7 @@
 
 
 BoardTodos is a simple task list application created in Ruby on Rails using Ruby, sqlite3,
-node.js, HTML, and CSS.
+node.js, HTML, CSS, and Bootstrap.
 
 BoardTodos allows you to:
 - Create tasks
