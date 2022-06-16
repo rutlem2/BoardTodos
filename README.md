@@ -1,6 +1,6 @@
 # BoardTodos
 
-![Alt text](https://pixabay.com/vectors/check-check-mark-red-mark-tick-303494/ "Checkmark")
+![Alt text]([https://pixabay.com/vectors/check-check-mark-red-mark-tick-303494/](https://cdn.pixabay.com/photo/2014/04/02/10/19/check-303494__340.png) "Checkmark")
 
 BoardTodos is a simple task list application created in Ruby on Rails using Ruby, sqlite3,
 node.js, HTML, and CSS.
