@@ -9,5 +9,6 @@ BoardTodos allows you to:
 - Create tasks
 - Add descriptions
 - Set creation and due dates
+- Mark off tasks
 - See tasks that are overdue, due today, and due in the future
 - Filter by tasks due today
