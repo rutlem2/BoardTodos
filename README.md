@@ -1,25 +1,13 @@
-# README
+# BoardTodos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Alt text](https://pixabay.com/vectors/check-check-mark-red-mark-tick-303494/ "Checkmark")
 
-Things you may want to cover:
+BoardTodos is a simple task list application created in Ruby on Rails using Ruby, sqlite3,
+node.js, HTML, and CSS.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# board-todos
+BoardTodos allows you to:
+- Create tasks
+- Add descriptions
+- Set creation and due dates
+- See tasks that are overdue, due today, and due in the future
+- Filter by tasks due today
