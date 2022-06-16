@@ -1,0 +1,71 @@
+<style>
+.btn-circle.btn-xl {
+    width: 50px;
+    height: 50px;
+    padding: 0px 0px;
+    border-radius: 35px;
+    font-size: 36px;
+    line-height: 1.33;
+    font-family: "emoji";
+}
+</style>
+
+<style>
+.shadow-style {
+    width: 50px;
+    height: 50px;
+    padding: 0px 0px;
+    border-radius: 35px;
+}
+</style>
+<style> 
+.opac-style {
+  opacity: .7;
+}
+</style>
+
+<%= javascript_include_tag 'tick_script.js' %>
+<%= javascript_include_tag 'today_todo.js' %>
+
+<style>
+body {
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(230,100,101,1) 0%, rgba(145,152,229,1) 100%); 
+}
+</style>
+
+<div style= "position:relative; left:400px">
+<%= link_to "Show All Todos", todos_path, class:"btn btn-primary shadow"%>
+<button type="button" class="btn btn-primary shadow" style= "position:relative; left:100px" onclick="getTodaysTodos()">Show Today's Todos</button>
+</div>
+<h1>My Todos</h1>
+
+<div id="todos" style= "position:relative; left:-40px">
+
+<%idVal = 0%>
+
+<% @todos.order(completion_date: :asc).each do |todo| %>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" id=<%= "id-" + idVal.to_s %> type="checkbox" value="" aria-label="..." onclick="isTicked(this.id)" autocomplete="off">
+      <%= link_to todo.todo_title, edit_todo_path(todo), class:"text-decoration-none", id:"id-" + idVal.to_s + "-text-box" %>
+
+      <% if todo.completion_date.nil? %>
+        <small></small>
+      <% elsif Time.now.to_i > (todo.completion_date + 7.hours).to_i %>
+        <small style="color: #F64C72">&nbsp;&nbsp;&nbsp;&nbsp;*OVERDUE*</small>
+      <% elsif todo.completion_date.to_date == Time.now.to_date %>
+        <small style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;<%= "Due Today" %></small>
+      <% else %>
+        <small style="color: gray" class="opac-style">&nbsp;&nbsp;&nbsp;&nbsp;<%= "Due: #{todo.completion_date.to_date.to_s}" %></small>
+      <% end %>
+
+      <% idVal += 1%>
+    </li>
+  </ul>
+  <% end %>
+</div>
+
+<div class="shadow shadow-style" style= "position:relative; left:600px; top: 30px">
+  <%= link_to "+", new_todo_path, class:"btn btn-primary btn-circle btn-xl" %>
+</div>

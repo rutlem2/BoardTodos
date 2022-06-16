@@ -1,0 +1,18 @@
+<style>
+body {
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(230,100,101,1) 0%, rgba(145,152,229,1) 100%); 
+}
+</style>
+
+<h1>Editing todo</h1>
+
+<%= render "form", todo: @todo %>
+
+<br>
+<br/>
+
+<div>
+  <%= link_to "See this Todo", @todo, class:"btn btn-secondary btn-sm" %>
+  <%= link_to "Return to Todos", todos_path, class:"btn btn-secondary btn-sm" %>
+</div>

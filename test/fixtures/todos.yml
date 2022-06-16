@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  todo_title: MyString
+  description: MyString
+  creation_date: 2022-06-13 17:19:07
+  completion_date: 2022-06-13 17:19:07
+
+two:
+  todo_title: MyString
+  description: MyString
+  creation_date: 2022-06-13 17:19:07
+  completion_date: 2022-06-13 17:19:07
